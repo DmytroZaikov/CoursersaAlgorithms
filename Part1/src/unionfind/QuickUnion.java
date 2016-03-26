@@ -18,4 +18,11 @@ public class QuickUnion extends UnionFindBase {
         return root(p) == root(q);
     }
 
+    public void union(int p, int q){
+        int rootP = root(p);
+        int rootQ = root(q);
+
+        id[rootP] = rootQ;
+    }
+
 }

@@ -1,7 +1,5 @@
 package unionfind;
 
-import java.util.Arrays;
-
 abstract class UnionFindBase {
 
     protected int[] id;
@@ -13,10 +11,7 @@ abstract class UnionFindBase {
         }
     }
 
-//    public abstract boolean isConnected(int p, int q);
-//    public abstract void union(int p, int q);
-
-    public void printHelper(){
+    public void prettyPrint(){
 
         for (int i = 0; i < id.length; i++) {
             System.out.print(i + " | ");
@@ -28,4 +23,8 @@ abstract class UnionFindBase {
         System.out.println();
 
         }
+
+    public abstract boolean isConnected(int p, int q);
+    public abstract void union(int p, int q);
+
 }
