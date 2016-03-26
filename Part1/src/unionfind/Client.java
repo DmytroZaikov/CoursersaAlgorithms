@@ -1,20 +1,22 @@
 package unionfind;
 
-import java.io.Console;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
 
-/**
- * Created by Dmytro on 3/22/2016.
- */
 public class Client {
 
     public static void main(String[] args){
 
-        Console cnsl = System.console();
-        int N = Integer.parseInt(cnsl.readLine());
+        try {
+            Scanner sc = new Scanner(new File("numbers.txt"));
+            while (sc.hasNextInt()){
+                System.out.println(sc.nextInt() + " ");
+            }
 
-        QuickFind qf = new QuickFind(N);
-
-
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
 }
