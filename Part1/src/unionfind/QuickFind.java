@@ -1,18 +1,9 @@
 package unionfind;
 
-/**
- * Created by Dmytro on 3/22/2016.
- */
-public class QuickFind {
-
-    private int[] id;
+public class QuickFind extends UnionFindBase{
 
     public QuickFind(int N) {
-
-        id = new int[N];
-        for (int i = 0; i < N; i++) {
-            id[i] = i;
-        }
+        super(N);
     }
 
     public boolean isConnected(int p, int q){

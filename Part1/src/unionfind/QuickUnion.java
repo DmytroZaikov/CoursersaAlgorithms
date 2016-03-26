@@ -1,20 +1,14 @@
 package unionfind;
 
-public class QuickUnion {
+public class QuickUnion extends UnionFindBase {
 
-    private int[] id;
-
-    public QuickUnion(int N) {
-
-        id = new int[N];
-        for (int i = 0; i < N; i++) {
-            id[i] = i;
-        }
+    public QuickUnion(int N){
+        super(N);
     }
 
     private int root(int elem){
 
-        while( id[elem] != elem){
+        while(id[elem] != elem){
             elem = id[elem];
         }
         return elem;

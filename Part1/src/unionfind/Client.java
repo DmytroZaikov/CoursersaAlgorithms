@@ -8,15 +8,22 @@ public class Client {
 
     public static void main(String[] args){
 
-        try {
-            Scanner sc = new Scanner(new File("numbers.txt"));
-            while (sc.hasNextInt()){
-                System.out.println(sc.nextInt() + " ");
-            }
+//        try {
+//            Scanner sc = new Scanner(new File("numbers.txt"));
+//            while (sc.hasNextInt()){
+//                //System.out.println(sc.nextInt() + " ");
+//            }
+//
+//        } catch (FileNotFoundException e) {
+//            e.printStackTrace();
+//        }
 
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
+        QuickFind quickFind = new QuickFind(10);
+        QuickUnion quickUnion = new QuickUnion(10);
+
+        quickFind.printHelper();
+        quickUnion.printHelper();
+
     }
 
 }
