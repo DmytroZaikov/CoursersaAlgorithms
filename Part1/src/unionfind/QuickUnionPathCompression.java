@@ -1,17 +1,18 @@
 package unionfind;
 
-public class QuickUnion extends UnionFindBase {
+public class QuickUnionPathCompression extends UnionFindBase {
 
-    public QuickUnion(int N){
+    public QuickUnionPathCompression(int N){
         super(N);
     }
 
-    private int root(int elem){
+    private int root(int node){
 
-        while(id[elem] != elem){
-            elem = id[elem];
+        while(id[node] != node){
+            id[node] = id[id[node]];
+            node = id[node];
         }
-        return elem;
+        return node;
     }
 
     public boolean isConnected(int p, int q){

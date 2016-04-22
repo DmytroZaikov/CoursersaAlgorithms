@@ -11,11 +11,11 @@ public class QuickUnionWeighted extends UnionFindBase {
         }
     }
 
-    private int root(int elem){
-        while(id[elem] != elem){
-            elem = id[elem];
+    private int root(int node){
+        while(id[node] != node){
+            node = id[node];
         }
-        return elem;
+        return node;
     }
 
     public boolean isConnected(int p, int q){
