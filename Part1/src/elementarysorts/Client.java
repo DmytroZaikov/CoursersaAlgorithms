@@ -5,11 +5,12 @@ import commonhelpers.Timerz;
 
 
 public class Client {
+    private static int ARRAY_LENGTH = 100;
 
     public static void main(String[] args){
         Timerz t = new Timerz();
-        Integer[] a1 = ArraysHelper.arrayOfIntInit();
-        Integer[] a2 = ArraysHelper.arrayOfIntInit();
+        Integer[] a1 = ArraysHelper.arrayOfIntInit(ARRAY_LENGTH);
+        Integer[] a2 = ArraysHelper.arrayOfIntInit(ARRAY_LENGTH);
 
         System.out.println("Selection Sort:");
         System.out.println("Before sorting:");
