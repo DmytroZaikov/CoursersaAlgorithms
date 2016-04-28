@@ -1,15 +1,15 @@
 package commonhelpers;
 
-public class Timer {
+public class Timerz {
 
     private long startTime;
     private long endTime;
 
-    public void Start(){
+    public void start(){
         startTime = System.currentTimeMillis();
     }
 
-    public void Stop(){
+    public void stop(){
         endTime = System.currentTimeMillis();
     }
 
