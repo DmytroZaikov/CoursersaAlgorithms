@@ -35,5 +35,6 @@ public class Client {
         System.out.println("After sorting:");
         ArraysHelper.arrayPrettyPrint(a2);
         System.out.println("Elapsed time: " + t.getElapsedTime());
+        //Connectivity
     }
 }
